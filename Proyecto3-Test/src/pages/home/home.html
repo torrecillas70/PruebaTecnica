@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Empleados
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-searchbar (ionInput)= "getItems($event)"></ion-searchbar>
+  <ion-list>
+    <ion-item *ngFor="let item of items" (click)="itemClick(item.id)">
+      <h2>
+        <ion-icon name="ios-contact"></ion-icon>
+        {{item.nombre}}
+        {{item.apellido}}
+      </h2>
+      <p>Telefono: {{item.telefono}}</p>
+      <p>Rut: {{item.rut}}</p>
+      <p>Fecha Nacimiento: {{item.fechaNacimiento}}</p>
+      <p>Direccion:{{item.direccion.calle}}<br>{{item.direccion.numero}}.{{item.direccion.comuna}}</p>
+    </ion-item>
+  </ion-list>
+</ion-content>

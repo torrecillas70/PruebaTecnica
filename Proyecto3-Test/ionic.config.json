@@ -1,0 +1,7 @@
+{
+  "name": "Proyecto3-Test",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}
